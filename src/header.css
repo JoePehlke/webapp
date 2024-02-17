@@ -1,4 +1,4 @@
-header {
+Header {
   background-color: red;
   height: 12.5vh; /* 1/8 of the viewport height */
   display: flex;
