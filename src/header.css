@@ -1,0 +1,11 @@
+header {
+  background-color: red;
+  height: 12.5vh; /* 1/8 of the viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: rgb(16, 233, 74); /* Optional: Change text color for better visibility */
+}
