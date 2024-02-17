@@ -4,8 +4,59 @@ Header {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%
+  
 }
 
 h1 {
   color: rgb(16, 233, 74); /* Optional: Change text color for better visibility */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 2vh 4vh; /* Set the height and width using viewport height (vh) */
+  text-decoration: none;
+  color: white;
+  background-color: #333; /* Button background color */
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 2em; /* Set the font size using viewport height (vh) */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+  /* Adjust button styling as needed */
+}
+/* Hamburger menu styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none; /* Hide the regular nav list on smaller screens */
+  }
+
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .nav-button {
+    margin-right: 0; /* Remove margin for buttons in the hamburger menu */
+  }
+}
+
+
+.nav-button:hover {
+  background-color: #555; /* Button background color on hover */
 }
