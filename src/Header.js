@@ -1,13 +1,15 @@
-// Header.js
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import HamburgerMenu from './HamburgerMenu'; // Import the new component
-import './Header.css'; // Import the CSS file
+import HamburgerMenu from './HamburgerMenu';
+import './Header.css';
 
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [showMenu, setShowMenu] = useState(false);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
+  const toggleHamburger = () => {
+    setHamburgerOpen(!hamburgerOpen);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,7 +26,6 @@ const Header = () => {
   return (
     <header className="header">
       {windowWidth >= 768 ? (
-        // Regular navigation for larger screens
         <div className="nav-buttons">
           <Link to="/" className="nav-button">
             Home
@@ -32,13 +33,16 @@ const Header = () => {
           <Link to="/blog" className="nav-button">
             Blog
           </Link>
+          <Link to="/contact" className="nav-button">
+            Contact
+          </Link>
         </div>
       ) : (
-        // Hamburger menu for smaller screens
-        <HamburgerMenu onClose={() => setShowMenu(false)} />
+        <div className="hamburger" onClick={toggleHamburger}>
+          <HamburgerMenu isOpen={hamburgerOpen} onClose={() => setHamburgerOpen(false)} />
+        </div>
       )}
 
-      {/* Additional code to conditionally hide buttons */}
       {windowWidth < 768 && (
         <style>{`.nav-buttons { display: none; }`}</style>
       )}

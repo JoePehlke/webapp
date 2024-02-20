@@ -7,6 +7,7 @@ import BlogPostList from './BlogPostList';
 import BlogPostPage from './BlogPostPage';
 import Home from './Home';
 import Contact from './Contact';
+import './App.css'
 const App = () => {
   return (
     <Router>

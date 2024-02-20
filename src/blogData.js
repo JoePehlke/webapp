@@ -9,6 +9,16 @@ const blogPostsData = [
     title: "Second Blog Post",
     content: "Content"
   },
+  {
+    id: 3,
+    title: "third Blog Post",
+    content: "Content"
+  },
+  {
+    id: 4,
+    title: "fourth Blog Post",
+    content: "Content"
+  },
   // Add more blog posts as needed
 ];
 export default blogPostsData;

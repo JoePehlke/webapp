@@ -1,19 +1,26 @@
 // HamburgerMenu.js
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './HamburgerMenu.css'; // Import the CSS file for styling
 
-const HamburgerMenu = ({ onClose }) => {
+const HamburgerMenu = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div className="hamburger-menu">
-      <div className="hamburger-icon" onClick={onClose}>
+    <div className={`hamburger-menu ${menuOpen ? 'open' : ''}`}>
+      <div className="hamburger-icon" onClick={toggleMenu}>
         &#9776;
       </div>
-      <div className="nav-buttons">
-        <Link to="/" className="nav-button" onClick={onClose}>
+      <div className="menu-links">
+        <Link to="/" className="nav-link" onClick={toggleMenu}>
           Home
         </Link>
-        <Link to="/blog" className="nav-button" onClick={onClose}>
+        <Link to="/blog" className="nav-link" onClick={toggleMenu}>
           Blog
         </Link>
       </div>
