@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url('./wotfard-regular-webfont.eot');
+  src: url('./wotfard-regular-webfont.woff2') format('woff2'),
+       url('./wotfard-regular-webfont.ttf') format('truetype');
+
+}
+body {
+  background: radial-gradient( #fbf8f8, #eceef4); /* Adjust colors as needed */
+  overflow-x: hidden;
+}
+
+.app-container{
+  margin: 2vw
+}
+
+h2{
+  font-family: "Wotfard", 'Times New Roman', Times, serif;
+  color: rgb(63, 24, 24);
+  letter-spacing: -1px;
+}
