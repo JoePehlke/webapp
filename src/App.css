@@ -1,6 +1,9 @@
 @font-face {
   font-family: "Wotfard";
-  src: url('./wotfard-regular-webfont.woff2') format('woff2');
+  src: url('./wotfard-regular-webfont.eot');
+  src: url('./wotfard-regular-webfont.woff2') format('woff2'),
+       url('./wotfard-regular-webfont.ttf') format('truetype');
+
 }
 body {
   background: radial-gradient( #fbf8f8, #eceef4); /* Adjust colors as needed */
