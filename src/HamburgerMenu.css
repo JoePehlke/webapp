@@ -43,4 +43,7 @@
   text-decoration: none;
   font-size: 1.5em;
   margin-bottom: 10px;
+  font-family: "Wotfard", 'Times New Roman', Times, serif;
+  color: rgb(241, 232, 232);
+  letter-spacing: -1px;
 }

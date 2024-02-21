@@ -20,7 +20,9 @@ Header {
   font-size: 1em; /* Set the font size using viewport height (vh) */
   cursor: pointer;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
-
+  font-family: "Wotfard", 'Times New Roman', Times, serif;
+  color: rgb(63, 24, 24);
+  letter-spacing: -1px;
   /* Adjust button styling as needed */
 }
 /* Hamburger menu styles for smaller screens */
@@ -44,6 +46,6 @@ Header {
   height: auto;
 }
 .linkedinlogo{
-  width: 50px;
+  width: 10vw;
   height: auto
 }
