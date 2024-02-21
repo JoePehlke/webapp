@@ -9,9 +9,18 @@ body {
   background: radial-gradient( #fbf8f8, #eceef4); /* Adjust colors as needed */
   overflow-x: hidden;
 }
-
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(65ch, 100%)
+    1fr;
+}
 .app-container{
-  margin: 2vw
+  margin: 2vw;
+  width: 90%;
+  text-align: center;
+
 }
 
 h2{

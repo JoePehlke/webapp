@@ -27,26 +27,29 @@ const Header = () => {
   return (
     <header className="header">
       {windowWidth >= 768 ? (
-        <div className="nav-buttons">
-          <Link to="/" className="nav-button">
-            Home
-          </Link>
-          <Link to="/blog" className="nav-button">
-            Blog
-          </Link>
-          <Link to="/contact" className="nav-button">
-            Contact
-          </Link>
+        <div className = "toolbar">
+          <div className="nav-buttons">
+            <Link to="/" className="nav-button">
+              Home
+            </Link>
+            <Link to="/blog" className="nav-button">
+              Blog
+            </Link>
+            <Link to="/contact" className="nav-button">
+              Contact
+            </Link>
+          </div>
+          <div className = "logos" >
+              <img src={githublogo} alt="githublogo" className="githublogo" />
+              <img src={linkedinlogo} alt="linkedinlogo" className="linkedinlogo" />
+          </div>
         </div>
       ) : (
         <div className="hamburger" onClick={toggleHamburger}>
           <HamburgerMenu isOpen={hamburgerOpen} onClose={() => setHamburgerOpen(false)} />
         </div>
       )}
-      <div className = "logos" >
-        <img src={githublogo} alt="githublogo" className="githublogo" />
-        <img src={linkedinlogo} alt="linkedinlogo" className="linkedinlogo" />
-      </div>
+
     </header>
   );
 };
