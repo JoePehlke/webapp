@@ -4,7 +4,7 @@ Header {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  width: 95%;  
+  
 }
 
 
@@ -13,7 +13,7 @@ Header {
   display: inline-block;
   padding: 1vh 3vh; /* Set the height and width using viewport height (vh) */
   text-decoration: none;
-  color: rgb(5, 4, 4);
+  color: rgb(8, 223, 226);
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -37,4 +37,13 @@ Header {
 
 .nav-button:hover {
   color:blue
+}
+
+.githublogo{
+  width: 10vw;
+  height: auto;
+}
+.linkedinlogo{
+  width: 50px;
+  height: auto
 }

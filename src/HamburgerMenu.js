@@ -1,9 +1,7 @@
-// HamburgerMenu.js
-
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './HamburgerMenu.css'; // Import the CSS file for styling
-
+//import { Link } from 'react-router-dom';
+import './HamburgerMenu.css';
+import OverlayMenu from './OverlayMenu';
 const HamburgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -12,18 +10,12 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div className={`hamburger-menu ${menuOpen ? 'open' : ''}`}>
-      <div className="hamburger-icon" onClick={toggleMenu}>
+    <div>
+      <div className={`hamburger-icon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         &#9776;
       </div>
-      <div className="menu-links">
-        <Link to="/" className="nav-link" onClick={toggleMenu}>
-          Home
-        </Link>
-        <Link to="/blog" className="nav-link" onClick={toggleMenu}>
-          Blog
-        </Link>
-      </div>
+
+      {menuOpen && <OverlayMenu onClose={toggleMenu} />}
     </div>
   );
 };

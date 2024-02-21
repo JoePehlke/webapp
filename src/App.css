@@ -1,8 +1,13 @@
 body {
-  background: radial-gradient( #fbf8f8, #a9b4e4); /* Adjust colors as needed */
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  min-height: 100vh;
+  background: radial-gradient( #fbf8f8, #eceef4); /* Adjust colors as needed */
   overflow-x: hidden;
+}
+
+.app-container{
+  margin: 2vw
+}
+
+h2{
+  font-family: "Wotfard", Times, sans-serif;
+  color: red;
 }

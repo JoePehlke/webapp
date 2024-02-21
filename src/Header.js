@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerMenu from './HamburgerMenu';
 import './Header.css';
-
+import githublogo from './github-logo.svg';
+import linkedinlogo from './linkedin-logo.png';
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -42,10 +43,10 @@ const Header = () => {
           <HamburgerMenu isOpen={hamburgerOpen} onClose={() => setHamburgerOpen(false)} />
         </div>
       )}
-
-      {windowWidth < 768 && (
-        <style>{`.nav-buttons { display: none; }`}</style>
-      )}
+      <div className = "logos" >
+        <img src={githublogo} alt="githublogo" className="githublogo" />
+        <img src={linkedinlogo} alt="linkedinlogo" className="linkedinlogo" />
+      </div>
     </header>
   );
 };
