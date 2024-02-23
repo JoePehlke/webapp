@@ -40,8 +40,12 @@ const Header = () => {
             </Link>
           </div>
           <div className = "logos" >
-              <img src={githublogo} alt="githublogo" className="githublogo" />
-              <img src={linkedinlogo} alt="linkedinlogo" className="linkedinlogo" />
+              <a href = "https://github.com/JoePehlke">
+                <img src={githublogo} alt="githublogo" className="githublogo" />
+              </a>
+              <a href = "https://linkedin.com/in/JoePehlke" >
+               <img src={linkedinlogo} alt="linkedinlogo" className="linkedinlogo" />
+              </a>
           </div>
         </div>
       ) : (

@@ -1,17 +1,14 @@
 Header {
   background-color: rgb(173, 104, 104);
-  height: 12.5vh; /* 1/8 of the viewport height */
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+   /* 1/8 of the viewport height */
   
+
 }
 
 
 
 .nav-button {
-  display: inline-block;
-  padding: 1rem 1rem; /* Set the height and width using viewport height (vh) */
+  padding: .5rem .5rem; /* Set the height and width using viewport height (vh) */
   text-decoration: none;
   color: rgb(8, 223, 226);
   border: none;
@@ -23,6 +20,7 @@ Header {
   font-family: "Wotfard", 'Times New Roman', Times, serif;
   color: rgb(63, 24, 24);
   letter-spacing: -1px;
+  gap: .25rem;
 
   /* Adjust button styling as needed */
 }
@@ -39,21 +37,23 @@ Header {
 
 .toolbar{
   display: flex;
-  padding: 1vh 1vw;
+  justify-content: space-between;
+  align-items: center;
 }
 .nav-button:hover {
   color:blue
 }
 
+.logos{
+  
+  gap: .5rem;
+}
 .githublogo{
   width: 2rem;
   height: 2rem;
-  vertical-align: middle;
-  padding: 1vh 1vw;
+
 }
 .linkedinlogo{
   width: 2rem;
   height: 2rem;
-  vertical-align: middle;
-  padding: 1vh 1vw;
 }
