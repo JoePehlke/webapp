@@ -6,7 +6,7 @@
 
 }
 body {
-  background: radial-gradient( #fbf8f8, #eceef4); /* Adjust colors as needed */
+  background: rgba(234, 233, 233, 0.82); /* Adjust colors as needed */
   overflow-x: hidden;
 }
 .wrapper {
