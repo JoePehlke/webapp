@@ -13,7 +13,7 @@ const BlogDropdown = () => {
           Full Stack
         </Link>
         <Link to="/blog/cybersecurity" className="blog-dropdown-item">
-          Cybersecurity
+          Cybersecurityff
         </Link>
       </div>
       <div className="blog-column">
