@@ -2,16 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerMenu from './HamburgerMenu';
 import './Header.css';
+import BlogDropdown from './BlogDropdown'; 
+
 import githublogo from './github-logo.svg';
 import linkedinlogo from './linkedin-logo.png';
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
+  const [blogDropdownOpen, setBlogDropdownOpen] = useState(false);
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
   };
-
+  const toggleBlogDropdown = () => {
+    setBlogDropdownOpen(!blogDropdownOpen);
+  };
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -25,15 +29,19 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="header">
+    <header className="Header">
       {windowWidth >= 768 ? (
         <div className = "toolbar">
           <div className="nav-buttons">
             <Link to="/" className="nav-button">
               Home
             </Link>
-            <Link to="/blog" className="nav-button">
-              Blog
+            <div className="nav-button" onClick={toggleBlogDropdown}style={{ position: 'relative' }}>
+              Bloglol
+              {blogDropdownOpen && <BlogDropdown />}
+            </div>
+            <Link to="/resume" className="nav-button">
+              Resume
             </Link>
             <Link to="/contact" className="nav-button">
               Contact

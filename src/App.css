@@ -6,7 +6,7 @@
 
 }
 body {
-  background: rgba(234, 233, 233, 0.82); /* Adjust colors as needed */
+  background: rgb(214, 221, 230); /* Adjust colors as needed */
   overflow-x: hidden;
 }
 .wrapper {
@@ -17,11 +17,15 @@ body {
   grid-column: 2;
 }
 
-
-
-
 h2{
   font-family: "Wotfard", 'Times New Roman', Times, serif;
-  color: rgb(63, 24, 24);
-  letter-spacing: -1px;
+  color: rgb(30, 35, 45);
+}
+h1{
+  font-family: "Wotfard", 'Times New Roman', Times, serif;
+  color: rgb(30, 35, 45);
+}
+p{
+  font-family: "Wotfard", 'Times New Roman', Times, serif;
+  color: rgb(30, 35, 45);
 }

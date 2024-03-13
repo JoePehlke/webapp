@@ -4,13 +4,14 @@
   grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); /* Adjusted for two cards per row */
   gap: 1rem;
   justify-content: space-around; /* Center the cards */
+  padding: 1rem
 }
 
 /* Additional styling for individual cards (you can modify this based on your design) */
 .card {
-  background-color: black;
+  background-color: rgb(0, 32, 91);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1rem 1rem;
   color: white;
   box-sizing: border-box;
   max-width: 100%; /* Max width to fill the available space */
