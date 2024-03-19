@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerMenu from './HamburgerMenu';
 import './Header.css';
@@ -6,16 +6,22 @@ import BlogDropdown from './BlogDropdown';
 
 import githublogo from './github-logo.svg';
 import linkedinlogo from './linkedin-logo.png';
+
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const [blogDropdownOpen, setBlogDropdownOpen] = useState(false);
+
+  const dropdownRef = useRef(null);
+
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
   };
+
   const toggleBlogDropdown = () => {
     setBlogDropdownOpen(!blogDropdownOpen);
   };
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -28,6 +34,20 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setBlogDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="Header">
       {windowWidth >= 768 ? (
@@ -36,8 +56,9 @@ const Header = () => {
             <Link to="/" className="nav-button">
               Home
             </Link>
-            <div className="nav-button" onClick={toggleBlogDropdown}style={{ position: 'relative' }}>
-              Bloglol
+            <div className="nav-button" onClick={toggleBlogDropdown} ref={dropdownRef} style={{ position: 'relative' }}>
+              Blog &#9660;
+
               {blogDropdownOpen && <BlogDropdown />}
             </div>
             <Link to="/resume" className="nav-button">
@@ -48,11 +69,11 @@ const Header = () => {
             </Link>
           </div>
           <div className = "logos" >
-              <a href = "https://github.com/JoePehlke">
+              <a href="https://github.com/JoePehlke">
                 <img src={githublogo} alt="githublogo" className="githublogo" />
               </a>
-              <a href = "https://linkedin.com/in/JoePehlke" >
-               <img src={linkedinlogo} alt="linkedinlogo" className="linkedinlogo" />
+              <a href="https://linkedin.com/in/JoePehlke" >
+                <img src={linkedinlogo} alt="linkedinlogo" className="linkedinlogo" />
               </a>
           </div>
         </div>
