@@ -1,14 +1,12 @@
-// BlogPage.js
 import React from 'react';
-import Card from './Card';
-import BlogData from './BlogData';
-import './BlogPage.css';
+import BlogPostCard from './BlogPostCard';
 
-const BlogPage = () => {
+const BlogPage = ({ blogPosts }) => {
   return (
-    <div className="blog-container">
-      {BlogData.map((post) => (
-        <Card key={post.id} title={post.title} content={post.content} />
+    <div>
+      <h1>Blog</h1>
+      {blogPosts.map(blogPost => (
+        <BlogPostCard key={blogPost.id} {...blogPost} />
       ))}
     </div>
   );

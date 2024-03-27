@@ -69,7 +69,7 @@ const Header = () => {
             </Link>
           </div>
           <div className = "logos" >
-              <a href="https://github.com/JoePehlke">
+                <a href="/html/test.html"> 
                 <img src={githublogo} alt="githublogo" className="githublogo" />
               </a>
               <a href="https://linkedin.com/in/JoePehlke" >
