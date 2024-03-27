@@ -1,0 +1,17 @@
+/* BlogPostCard.css */
+.blog-post-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.blog-post-card h2 {
+  margin-top: 0;
+}
+
+.author-date {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,28 +1,31 @@
 Header {
-  background-color: rgb(173, 104, 104);
-  height: 12.5vh; /* 1/8 of the viewport height */
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+   /* 1/8 of the viewport height */
+   display: grid;
+   grid-template-columns: 1fr auto; /* Two columns: 1 for nav-buttons, 1 for logos */
+   align-items: center;
   
+  }
+
+
+.nav-buttons{
+  display: flex;
+  justify-content: flex-start;
 }
-
-
-
 .nav-button {
-  display: inline-block;
-  padding: 1vh 3vh; /* Set the height and width using viewport height (vh) */
+
+  padding: .5rem .5rem; /* Set the height and width using viewport height (vh) */
   text-decoration: none;
   color: rgb(8, 223, 226);
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 1em; /* Set the font size using viewport height (vh) */
+  font-size: 1rem; /* Set the font size using viewport height (vh) */
   cursor: pointer;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
   font-family: "Wotfard", 'Times New Roman', Times, serif;
-  color: rgb(63, 24, 24);
-  letter-spacing: -1px;
+  color: rgb(30, 35, 45);
+  gap: .25rem;
+
   /* Adjust button styling as needed */
 }
 /* Hamburger menu styles for smaller screens */
@@ -36,16 +39,25 @@ Header {
   }
 }
 
-
+.toolbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .nav-button:hover {
-  color:blue
+  color:rgb(115, 199, 25)
 }
 
+.logos{
+  justify-self: end;
+  gap: .5rem;
+}
 .githublogo{
-  width: 10vw;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
+
 }
 .linkedinlogo{
-  width: 10vw;
-  height: auto
+  width: 2rem;
+  height: 2rem;
 }
